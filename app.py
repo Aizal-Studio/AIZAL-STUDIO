@@ -1,7 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for, send_file
 from db import get_connection
 from datetime import datetime
+import os
+
 app = Flask(__name__)
+
+
+
 
 # ==========================
 # Home Page
@@ -461,4 +466,5 @@ def add_student():
 # Run Application
 # ==========================
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
