@@ -1,0 +1,392 @@
+{% extends "base.html" %}
+
+{% block title %}AIZAL STUDIO | Learn • Create • Lead{% endblock %}
+
+{% block content %}
+
+<!-- =========================
+        HERO SECTION
+========================= -->
+
+<section class="hero">
+
+    <div class="container hero-container">
+
+        <!-- Left -->
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                Welcome to AIZAL STUDIO
+            </span>
+
+            <h1>
+
+                Learn Skills.
+                <br>
+
+                Build Your Future.
+
+            </h1>
+
+            <p>
+
+                AIZAL STUDIO is a professional IT & Digital Skills Institute
+                where students learn practical skills, build real projects,
+                earn verified certificates and prepare for successful careers.
+
+            </p>
+
+            <div class="hero-buttons">
+
+               
+                <a href="/courses" class="btn">Explore Courses</a>
+                </a>
+
+                <a href="{{ url_for('verify') }}" class="btn">
+                Verify Certificate
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Right -->
+
+        <div class="hero-image">
+
+            <img src="{{ url_for('static', filename='images/hero.png') }}" alt="Hero Image">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+      STATISTICS
+========================= -->
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat-card">
+
+            <h2>6+</h2>
+
+            <p>Professional Courses</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>100%</h2>
+
+            <p>Verified Certificates</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>Real</h2>
+
+            <p>Portfolio Projects</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>24/7</h2>
+
+            <p>Learning Support</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+        ABOUT
+========================= -->
+
+<section class="about-home">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+
+                About AIZAL STUDIO
+
+            </h2>
+
+            <p>
+
+                We provide industry-focused education designed to prepare
+                students for freelancing, higher education and professional careers.
+
+            </p>
+
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-box">
+
+                <h3>
+
+                    Practical Learning
+
+                </h3>
+
+                <p>
+
+                    Learn by building real-world projects instead of only theory.
+
+                </p>
+
+            </div>
+
+            <div class="about-box">
+
+                <h3>
+
+                    Career Focused
+
+                </h3>
+
+                <p>
+
+                    Build skills demanded by companies and freelance clients.
+
+                </p>
+
+            </div>
+
+            <div class="about-box">
+
+                <h3>
+
+                    Professional Certificates
+
+                </h3>
+
+                <p>
+
+                    Every completed course includes a verifiable certificate.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+        COURSES
+========================= -->
+
+<section class="courses-home">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+
+                Popular Courses
+
+            </h2>
+
+        </div>
+
+        <div class="course-grid">
+
+            <div class="course-card">
+
+                <h3>
+
+                    Python Programming
+
+                </h3>
+
+            </div>
+
+            <div class="course-card">
+
+                <h3>
+
+                    Data Science
+
+                </h3>
+
+            </div>
+
+            <div class="course-card">
+
+                <h3>
+
+                    Web Development
+
+                </h3>
+
+            </div>
+
+            <div class="course-card">
+
+                <h3>
+
+                    Canva Design
+
+                </h3>
+
+            </div>
+
+            <div class="course-card">
+
+                <h3>
+
+                    MS Office
+
+                </h3>
+
+            </div>
+
+            <div class="course-card">
+
+                <h3>
+
+                    AI Tools
+
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+      FEATURED PROJECT
+========================= -->
+
+<section class="project-home">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+
+                Featured Project
+
+            </h2>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>
+
+                Punjab District Development Dashboard
+
+            </h3>
+
+            <p>
+
+                Interactive Streamlit dashboard with maps,
+                charts, district analytics, PDF export and CSV export.
+
+            </p>
+
+            <a href="https://punjab-district-development-dashboard.streamlit.app/" target="_blank" class="btn">
+
+                Live Demo
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+      CERTIFICATE
+========================= -->
+
+<section class="certificate-home">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+
+                Certificate Verification
+
+            </h2>
+
+            <p>
+
+                Verify every certificate issued by AIZAL STUDIO.
+
+            </p>
+
+        </div>
+
+        <a href="/verify" class="btn">
+
+            Verify Certificate
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+        CONTACT
+========================= -->
+
+<section class="contact-home">
+
+    <div class="container">
+
+        <h2>
+
+            Ready To Start Your Journey?
+
+        </h2>
+
+        <p>
+
+            Join AIZAL STUDIO today and build your future with practical skills.
+
+        </p>
+
+        <a href="/contact" class="btn">
+
+            Contact Us
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

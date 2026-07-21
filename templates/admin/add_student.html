@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}Add Student{% endblock %}
+
+{% block content %}
+
+<section class="verify-section">
+
+<div class="container">
+
+<div class="verify-card">
+
+<h1>Add Student</h1>
+
+{% if success %}
+
+<div class="success-message">
+{{ success }}
+</div>
+
+{% endif %}
+
+<form action="/admin/add-student" method="POST">
+
+<input
+type="text"
+name="certificate_id"
+placeholder="Certificate ID"
+required>
+
+<input
+type="text"
+name="student_name"
+placeholder="Student Name"
+value="{{ student.student_name if student else '' }}"
+required>
+
+<input
+type="text"
+name="father_name"
+placeholder="Father Name"
+value="{{ student.father_name if student else '' }}"
+required>
+
+<input
+type="text"
+name="phone"
+placeholder="Phone Number"
+value="{{ student.phone if student else '' }}">
+
+<input
+type="email"
+name="email"
+placeholder="Email Address"
+value="{{ student.email if student else '' }}">
+
+<input
+type="text"
+name="city"
+placeholder="City"
+value="{{ student.city if student else '' }}">
+
+<input
+type="text"
+name="course"
+placeholder="Course"
+value="{{ student.course if student else '' }}"
+required>
+
+<input
+type="text"
+name="duration"
+placeholder="Duration"
+value="{{ student.duration if student else '2 Months' }}"
+required>
+
+<input
+type="text"
+name="grade"
+placeholder="Grade">
+
+<input
+type="date"
+name="issue_date">
+
+<select name="status">
+
+<option value="Valid">Valid</option>
+
+<option value="Pending">Pending</option>
+
+<option value="Expired">Expired</option>
+
+</select>
+
+<button type="submit" class="btn">
+Save Student
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

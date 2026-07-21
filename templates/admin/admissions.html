@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Admissions{% endblock %}
+
+{% block content %}
+
+<section class="dashboard">
+
+<div class="container">
+
+<h1 class="dashboard-title">
+
+Admission Applications
+
+</h1>
+
+<table class="student-table">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Course</th>
+
+<th>Phone</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for student in admissions %}
+
+<tr>
+
+<td>{{ student.id }}</td>
+
+<td>{{ student.full_name }}</td>
+
+<td>{{ student.course }}</td>
+
+<td>{{ student.phone }}</td>
+
+<td>
+
+{% if student.status == "Approved" %}
+
+<span style="color:green;font-weight:bold;">
+Approved
+</span>
+
+{% elif student.status == "Rejected" %}
+
+<span style="color:red;font-weight:bold;">
+Rejected
+</span>
+
+{% else %}
+
+<span style="color:orange;font-weight:bold;">
+Pending
+</span>
+
+{% endif %}
+
+</td>
+
+<td>
+
+<a href="/admin/admission/approve/{{ student.id }}"
+class="btn"
+style="background:green;margin-right:5px;">
+
+Approve
+
+</a>
+
+<a href="/admin/admission/reject/{{ student.id }}"
+class="btn"
+style="background:#dc2626;">
+
+Reject
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Students{% endblock %}
+
+{% block content %}
+
+<section class="verify-section">
+
+<div class="container">
+
+<div class="verify-card">
+
+<h1>All Students</h1>
+
+<table class="student-table">
+
+<thead>
+
+<tr>
+
+<th>Certificate ID</th>
+
+<th>Student</th>
+
+<th>Father</th>
+
+<th>Phone</th>
+
+<th>Email</th>
+
+<th>City</th>
+
+<th>Course</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for student in students %}
+
+<tr>
+
+<td>{{ student.certificate_id }}</td>
+
+<td>{{ student.student_name }}</td>
+
+<td>{{ student.father_name }}</td>
+
+<td>{{ student.phone }}</td>
+
+<td>{{ student.email }}</td>
+
+<td>{{ student.city }}</td>
+
+<td>{{ student.course }}</td>
+
+<td>{{ student.status }}</td>
+
+<td>
+
+<a href="/admin/edit-student/{{ student.id }}" class="btn">
+Edit
+</a>
+
+<a href="/admin/delete-student/{{ student.id }}"
+class="btn"
+onclick="return confirm('Delete this student?');">
+Delete
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

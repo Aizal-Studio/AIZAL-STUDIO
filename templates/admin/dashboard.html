@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+
+<section class="dashboard">
+
+<div class="container">
+
+<h1 class="dashboard-title">
+
+AIZAL STUDIO ADMIN PANEL
+
+</h1>
+
+<!-- =========================
+Dashboard Statistics
+========================= -->
+
+<div class="stats-grid">
+
+    <div class="stat-box">
+        <h3>{{ total_students }}</h3>
+        <p>Total Students</p>
+    </div>
+
+    <div class="stat-box">
+        <h3>{{ total_students }}</h3>
+        <p>Certificates Issued</p>
+    </div>
+
+    <div class="stat-box">
+        <h3>{{ valid_certificates }}</h3>
+        <p>Valid Certificates</p>
+    </div>
+
+    <div class="stat-box">
+        <h3>6</h3>
+        <p>Courses</p>
+    </div>
+
+</div>
+
+<!-- =========================
+Dashboard Cards
+========================= -->
+
+<div class="dashboard-grid">
+
+    <!-- Students -->
+
+    <div class="dashboard-card">
+
+        <h2>👨‍🎓 Students</h2>
+
+        <p>Manage Registered Students</p>
+
+        <a href="/admin/students" class="btn">
+
+            View Students
+
+        </a>
+
+    </div>
+
+    <!-- Admissions -->
+
+    <div class="dashboard-card">
+
+        <h2>📝 Admissions</h2>
+
+        <p>View New Admission Applications</p>
+
+        <a href="/admin/admissions" class="btn">
+
+            View Admissions
+
+        </a>
+
+    </div>
+
+    <!-- Add Student -->
+
+    <div class="dashboard-card">
+
+        <h2>➕ Add Student</h2>
+
+        <p>Add Student & Issue Certificate</p>
+
+        <a href="/admin/add-student" class="btn">
+
+            Add Student
+
+        </a>
+
+    </div>
+
+    <!-- Verify -->
+
+    <div class="dashboard-card">
+
+        <h2>🔍 Verify</h2>
+
+        <p>Verify Certificates</p>
+
+        <a href="/verify" class="btn">
+
+            Verify Certificate
+
+        </a>
+
+    </div>
+
+    <!-- Certificates -->
+
+    <div class="dashboard-card">
+
+        <h2>📄 Certificates</h2>
+
+        <p>Generate & Download Certificates</p>
+
+        <button class="btn" disabled>
+
+            Coming Soon
+
+        </button>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

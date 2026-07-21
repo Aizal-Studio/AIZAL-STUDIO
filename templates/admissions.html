@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Admissions | AIZAL STUDIO{% endblock %}
+
+{% block content %}
+
+<section class="contact-hero">
+
+    <h1>Admissions Open</h1>
+
+    <p>
+
+        Join AIZAL STUDIO and start your professional digital skills journey.
+
+    </p>
+
+</section>
+
+<section class="contact-section">
+
+<div class="contact-form">
+
+<h2>Admission Form</h2>
+
+<form action="/admissions" method="POST">
+
+<input type="text" name="full_name" placeholder="Full Name" required>
+
+<input type="text" name="father_name" placeholder="Father Name" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="phone" placeholder="Phone Number" required>
+
+<input type="text" name="city" placeholder="City" required>
+
+<input type="text" name="qualification" placeholder="Qualification" required>
+
+<select name="course" required>
+
+<option value="">Select Course</option>
+
+<option>Python Programming</option>
+
+<option>Data Science</option>
+
+<option>Web Development</option>
+
+<option>Canva & Graphic Design</option>
+
+<option>MS Office</option>
+
+<option>AI Tools</option>
+
+</select>
+
+<button class="btn-course">
+
+Submit Admission
+
+</button>
+
+</form>
+
+</div>
+
+<div class="contact-info">
+
+<h2>Admission Information</h2>
+
+<div class="info-box">
+
+<h3>📚 Courses</h3>
+
+<p>Professional IT & Digital Skills Training</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>💻 Mode</h3>
+
+<p>100% Online Classes</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>📜 Certificate</h3>
+
+<p>Certificate will be issued after successful completion.</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>📱 Contact</h3>
+
+<p>0318-1698451</p>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

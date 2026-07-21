@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}AIZAL STUDIO{% endblock %}</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    {% block head %}{% endblock %}
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <a href="/">AIZAL <span>STUDIO</span></a>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="/">Home</a></li>
+
+                <li><a href="/about">About</a></li>
+
+                <li><a href="/courses">Courses</a></li>
+
+                <li><a href="/admissions">Admissions</a></li>
+
+                <li><a href="/services">Services</a></li>
+
+                <li><a href="/portfolio">Portfolio</a></li>
+
+                <li><a href="/verify">Verify Certificate</a></li>
+
+                <li><a href="/contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        {% block content %}
+
+        {% endblock %}
+
+    </main>
+
+
+    <footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+
+            <h2>AIZAL STUDIO</h2>
+
+            <p>
+                Empowering students with professional IT and Digital Skills through
+                high-quality online education.
+            </p>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="/">Home</a></li>
+
+                <li><a href="/about">About</a></li>
+
+                <li><a href="/courses">Courses</a></li>
+
+                <li><a href="/admissions">Admissions</a></li>
+
+                <li><a href="/services">Services</a></li>
+
+                <li><a href="/portfolio">Portfolio</a></li>
+
+                <li><a href="/contact">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Our Courses</h3>
+
+            <ul>
+
+                <li>Python Programming</li>
+
+                <li>Data Science</li>
+
+                <li>Web Development</li>
+
+                <li>Canva & Graphic Design</li>
+
+                <li>MS Office</li>
+
+                <li>AI Tools</li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Contact Us</h3>
+
+            <p>📧 d0162691@gmail.com</p>
+
+            <p>📱 0318-1698451</p>
+
+            <p>🌐 100% Online Classes</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 AIZAL STUDIO | All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    {% block scripts %}{% endblock %}
+
+</body>
+
+</html>

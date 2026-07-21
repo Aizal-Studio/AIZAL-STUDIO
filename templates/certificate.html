@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>AIZAL STUDIO Certificate</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/certificate.css') }}">
+
+</head>
+
+<body>
+
+<div class="certificate">
+
+<img
+class="background"
+src="{{ url_for('static', filename='images/certificate_template.png') }}">
+
+<div class="student-name">
+
+{{ student.student_name }}
+
+</div>
+
+<div class="course">
+
+{{ student.course }}
+
+</div>
+
+<div class="certificate-id">
+
+{{ student.certificate_id }}
+
+</div>
+
+<div class="duration">
+
+{{ student.duration }}
+
+</div>
+
+<div class="grade">
+
+{{ student.grade }}
+
+</div>
+
+<div class="issue-date">
+
+{{ student.issue_date }}
+
+</div>
+
+<div class="qr">
+
+<img src="{{ url_for('static',
+filename='qrcodes/' + student.certificate_id + '.png') }}">
+
+</div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Student{% endblock %}
+
+{% block content %}
+
+<section class="verify-section">
+
+<div class="container">
+
+<div class="verify-card">
+
+<h1>Edit Student</h1>
+
+<form method="POST">
+
+<input
+type="text"
+name="certificate_id"
+value="{{ student.certificate_id }}"
+placeholder="Certificate ID"
+required>
+
+<input
+type="text"
+name="student_name"
+value="{{ student.student_name }}"
+placeholder="Student Name"
+required>
+
+<input
+type="text"
+name="father_name"
+value="{{ student.father_name }}"
+placeholder="Father Name"
+required>
+
+<input
+type="text"
+name="phone"
+value="{{ student.phone }}"
+placeholder="Phone Number">
+
+<input
+type="email"
+name="email"
+value="{{ student.email }}"
+placeholder="Email Address">
+
+<input
+type="text"
+name="city"
+value="{{ student.city }}"
+placeholder="City">
+
+<input
+type="text"
+name="course"
+value="{{ student.course }}"
+placeholder="Course"
+required>
+
+<input
+type="text"
+name="duration"
+value="{{ student.duration }}"
+placeholder="Duration"
+required>
+
+<input
+type="text"
+name="grade"
+value="{{ student.grade }}"
+placeholder="Grade"
+required>
+
+<input
+type="date"
+name="issue_date"
+value="{{ student.issue_date }}">
+
+<select name="status">
+
+<option value="Valid"
+{% if student.status=="Valid" %}selected{% endif %}>
+Valid
+</option>
+
+<option value="Expired"
+{% if student.status=="Expired" %}selected{% endif %}>
+Expired
+</option>
+
+<option value="Pending"
+{% if student.status=="Pending" %}selected{% endif %}>
+Pending
+</option>
+
+</select>
+
+<button class="btn">
+Update Student
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

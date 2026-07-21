@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block title %}Certificate Verification | AIZAL STUDIO{% endblock %}
+
+{% block content %}
+
+<section class="verify-section">
+
+    <div class="container">
+
+        <div class="verify-card">
+
+            <span class="verify-badge">
+                AIZAL STUDIO
+            </span>
+
+            <h1>Certificate Verification</h1>
+
+            <p>
+                Enter the Certificate ID below to verify whether a certificate
+                issued by AIZAL STUDIO is valid.
+            </p>
+
+            <form action="/verify" method="POST">
+
+                <input
+                    type="text"
+                    name="certificate_id"
+                    placeholder="Example: AZS-2026-001"
+                    required
+                >
+
+                <button type="submit" class="btn">
+                    Verify Certificate
+                </button>
+
+            </form>
+
+            {% if student %}
+
+<div class="result-card success">
+
+    <h2>✅ Certificate Verified</h2>
+
+    <p><strong>Certificate ID:</strong> {{ student.certificate_id }}</p>
+
+    <p><strong>Student Name:</strong> {{ student.student_name }}</p>
+
+    <p><strong>Father Name:</strong> {{ student.father_name }}</p>
+
+    <p><strong>Course:</strong> {{ student.course }}</p>
+
+    <p><strong>Duration:</strong> {{ student.duration }}</p>
+
+    <p><strong>Grade:</strong> {{ student.grade }}</p>
+
+    <p><strong>Issue Date:</strong> {{ student.issue_date }}</p>
+
+    <p><strong>Status:</strong> {{ student.status }}</p>
+
+</div>
+
+{% elif request.method == "POST" %}
+
+<div class="result-card error">
+
+    <h2>❌ Certificate Not Found</h2>
+
+    <p>Please check the Certificate ID and try again.</p>
+
+</div>
+
+{% endif %}
+            <div class="verify-note">
+
+                <p>
+                    Every certificate issued by AIZAL STUDIO has a unique
+                    Certificate ID and QR Code for verification.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+/*==========================================
+CERTIFICATE VERIFICATION
+==========================================*/
+
+.verify-section{
+
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#eff6ff,#ffffff,#f8fafc);
+
+}
+
+.verify-card{
+
+    max-width:700px;
+    margin:auto;
+    background:#fff;
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.verify-badge{
+
+    display:inline-block;
+    background:#dbeafe;
+    color:#2563eb;
+    padding:10px 20px;
+    border-radius:50px;
+    font-weight:600;
+    margin-bottom:20px;
+
+}
+
+.verify-card h1{
+
+    margin-bottom:20px;
+
+}
+
+.verify-card p{
+
+    color:#64748b;
+    margin-bottom:30px;
+
+}
+
+.verify-card form{
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+.verify-card input{
+
+    padding:16px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+
+}
+
+.verify-card input:focus{
+
+    border-color:#2563eb;
+
+}
+
+.verify-note{
+
+    margin-top:30px;
+    font-size:14px;
+    color:#64748b;
+
+}
