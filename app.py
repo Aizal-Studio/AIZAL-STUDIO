@@ -31,6 +31,139 @@ def about():
 def courses():
     return render_template("courses.html")
 
+# ==========================
+# Course Details
+# ==========================
+
+COURSES = {
+
+    "python": {
+        "title": "Python Programming",
+        "icon": "🐍",
+        "instructor": "Beenish",
+        "duration": "2 Months",
+        "timing": "Monday - Friday | 5:00 PM - 7:00 PM",
+        "mode": "Physical + Online",
+        "level": "Beginner",
+        "description": "Learn Python from beginner to advanced with practical projects.",
+        "outline": [
+            "Python Basics",
+            "Variables & Data Types",
+            "Functions",
+            "Loops",
+            "Object Oriented Programming",
+            "SQLite Database",
+            "Flask",
+            "Final Project"
+        ]
+    },
+
+    "data-science": {
+        "title": "Data Science",
+        "icon": "📊",
+        "instructor": "Beenish",
+        "duration": "3 Months",
+        "timing": "Monday - Friday | 4:00 PM - 6:00 PM",
+        "mode": "Physical + Online",
+        "level": "Intermediate",
+        "description": "Learn Data Analysis, Visualization and Machine Learning.",
+        "outline": [
+            "Python for Data Science",
+            "Pandas",
+            "NumPy",
+            "Matplotlib",
+            "Machine Learning",
+            "Projects"
+        ]
+    },
+
+    "web-development": {
+        "title": "Web Development",
+        "icon": "🌐",
+        "instructor": "Beenish",
+        "duration": "3 Months",
+        "timing": "Monday - Friday | 6:00 PM - 8:00 PM",
+        "mode": "Physical + Online",
+        "level": "Beginner",
+        "description": "HTML, CSS, JavaScript, Flask.",
+        "outline": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap",
+            "Flask",
+            "SQLite",
+            "Deployment"
+        ]
+    },
+
+    "ai-tools": {
+        "title": "AI Tools",
+        "icon": "🤖",
+        "instructor": "Mam Amna",
+        "duration": "1 Month",
+        "timing": "Weekend Batch",
+        "mode": "Physical + Online",
+        "level": "Beginner",
+        "description": "Master ChatGPT and AI productivity tools.",
+        "outline": [
+            "ChatGPT",
+            "Gemini",
+            "Copilot",
+            "Prompt Engineering",
+            "AI for Office Work"
+        ]
+    },
+
+    "ielts": {
+        "title": "IELTS Preparation",
+        "icon": "🇬🇧",
+        "instructor": "Mam Fatima",
+        "duration": "2 Months",
+        "timing": "Morning & Evening",
+        "mode": "Physical",
+        "level": "All Levels",
+        "description": "Complete IELTS Preparation.",
+        "outline": [
+            "Speaking",
+            "Writing",
+            "Reading",
+            "Listening",
+            "Mock Tests"
+        ]
+    },
+
+    "spoken-english": {
+        "title": "Spoken English",
+        "icon": "🗣",
+        "instructor": "Mam Fatima",
+        "duration": "2 Months",
+        "timing": "Morning & Evening",
+        "mode": "Physical",
+        "level": "Beginner",
+        "description": "Speak English confidently.",
+        "outline": [
+            "Daily Conversation",
+            "Grammar",
+            "Vocabulary",
+            "Pronunciation"
+        ]
+    }
+
+}
+
+@app.route("/course/<course_name>")
+def course_details(course_name):
+
+    course = COURSES.get(course_name)
+
+    if course is None:
+        return "Course Not Found"
+
+    return render_template(
+        "course_details.html",
+        course=course
+    )
 
 # ==========================
 # Services Page

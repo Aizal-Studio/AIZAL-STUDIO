@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}{{ course.title }} | AIZAL STUDIO{% endblock %}
+
+{% block content %}
+
+<section class="course-details">
+
+    <div class="course-header">
+
+        <div class="course-icon">
+            {{ course.icon }}
+        </div>
+
+        <h1>{{ course.title }}</h1>
+
+        <p>{{ course.description }}</p>
+
+    </div>
+
+    <div class="course-info">
+
+        <div class="info-box">
+
+            <h3>👨‍🏫 Instructor</h3>
+
+            <p>{{ course.instructor }}</p>
+
+        </div>
+
+        <div class="info-box">
+
+            <h3>⏳ Duration</h3>
+
+            <p>{{ course.duration }}</p>
+
+        </div>
+
+        <div class="info-box">
+
+            <h3>🕒 Class Timing</h3>
+
+            <p>{{ course.timing }}</p>
+
+        </div>
+
+        <div class="info-box">
+
+            <h3>💻 Mode</h3>
+
+            <p>{{ course.mode }}</p>
+
+        </div>
+
+        <div class="info-box">
+
+            <h3>📈 Level</h3>
+
+            <p>{{ course.level }}</p>
+
+        </div>
+
+    </div>
+
+    <div class="outline-card">
+
+        <h2>📚 Course Outline</h2>
+
+        <ul>
+
+            {% for item in course.outline %}
+
+            <li>✔ {{ item }}</li>
+
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+    <div class="certificate-card">
+
+        <h2>🎓 Certificate</h2>
+
+        <p>
+
+            Every student receives an official
+
+            <strong>AIZAL STUDIO Certificate</strong>
+
+            with Online Verification.
+
+        </p>
+
+    </div>
+
+    <div class="learning-card">
+
+        <h2>✨ Learning Experience</h2>
+
+        <ul>
+
+            <li>✔ Practical Sessions</li>
+
+            <li>✔ Real Projects</li>
+
+            <li>✔ One-to-One Guidance</li>
+
+            <li>✔ Assignments</li>
+
+            <li>✔ Career Support</li>
+
+            <li>✔ Professional Certificate</li>
+
+        </ul>
+
+    </div>
+
+    <div class="course-buttons">
+
+        <a href="/admissions" class="btn-course">
+
+            📝 Apply Now
+
+        </a>
+
+        <a href="https://wa.me/03181698451?text=Assalam-o-Alaikum%20I%20want%20information%20about%20{{ course.title }}" class="btn-course">
+
+            💬 WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}
