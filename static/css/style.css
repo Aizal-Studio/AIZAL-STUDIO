@@ -2849,3 +2849,17 @@ html{
     scroll-behavior:smooth;
 
 }
+
+.hero-image img{
+
+    width:100%;
+    max-width:650px;
+    height:450px;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+}
