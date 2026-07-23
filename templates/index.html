@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}AIZAL STUDIO | Learn • Create • Lead{% endblock %}
+{% block title %}AIZAL STUDIO | Pakistan's Digital Classroom{% endblock %}
 
 {% block content %}
 
@@ -17,34 +17,45 @@
         <div class="hero-content">
 
             <span class="hero-badge">
-                Welcome to AIZAL STUDIO
+
+                Pakistan's Modern Digital Learning Institute
+
             </span>
 
             <h1>
 
-                Learn Skills.
+                Pakistan's
                 <br>
 
-                Build Your Future.
+                Digital Classroom
 
             </h1>
 
             <p>
 
-                AIZAL STUDIO is a professional IT & Digital Skills Institute
-                where students learn practical skills, build real projects,
-                earn verified certificates and prepare for successful careers.
+                <strong>Walk into a classroom without leaving your home.</strong>
+
+                <br><br>
+
+                Learn Python, Artificial Intelligence, Data Science,
+                Web Development, IELTS, Spoken English and other
+                professional digital skills through practical learning,
+                real-world projects and verifiable certificates.
 
             </p>
 
             <div class="hero-buttons">
 
-               
-                <a href="/courses" class="btn">Explore Courses</a>
+                <a href="/courses" class="btn">
+
+                    Explore Courses
+
                 </a>
 
-                <a href="{{ url_for('verify') }}" class="btn">
-                Verify Certificate
+                <a href="/verify" class="btn">
+
+                    Verify Certificate
+
                 </a>
 
             </div>
@@ -55,7 +66,8 @@
 
         <div class="hero-image">
 
-            <img src="{{ url_for('static', filename='images/hero.png') }}" alt="Hero Image">
+            <img src="{{ url_for('static', filename='images/hero.png') }}"
+                 alt="AIZAL STUDIO Digital Classroom">
 
         </div>
 
@@ -65,7 +77,7 @@
 
 
 <!-- =========================
-      STATISTICS
+        STATISTICS
 ========================= -->
 
 <section class="stats">
@@ -74,9 +86,13 @@
 
         <div class="stat-card">
 
-            <h2>6+</h2>
+            <h2>08+</h2>
 
-            <p>Professional Courses</p>
+            <p>
+
+                Professional Courses
+
+            </p>
 
         </div>
 
@@ -84,7 +100,11 @@
 
             <h2>100%</h2>
 
-            <p>Verified Certificates</p>
+            <p>
+
+                Verifiable Certificates
+
+            </p>
 
         </div>
 
@@ -92,15 +112,23 @@
 
             <h2>Real</h2>
 
-            <p>Portfolio Projects</p>
+            <p>
+
+                Project-Based Learning
+
+            </p>
 
         </div>
 
         <div class="stat-card">
 
-            <h2>24/7</h2>
+            <h2>Pakistan</h2>
 
-            <p>Learning Support</p>
+            <p>
+
+                Online Learning
+
+            </p>
 
         </div>
 
@@ -121,18 +149,22 @@
 
             <h2>
 
-                About AIZAL STUDIO
+                Why AIZAL STUDIO?
 
             </h2>
 
             <p>
 
-                We provide industry-focused education designed to prepare
-                students for freelancing, higher education and professional careers.
+                We are building more than an online institute.
+
+                We are creating Pakistan's Digital Classroom where
+                students gain practical experience, build professional
+                portfolios and prepare for successful careers.
 
             </p>
 
         </div>
+
 
         <div class="about-grid">
 
@@ -146,39 +178,98 @@
 
                 <p>
 
-                    Learn by building real-world projects instead of only theory.
+                    Learn by building real projects instead of
+                    memorizing theory.
 
                 </p>
 
             </div>
 
+
             <div class="about-box">
 
                 <h3>
 
-                    Career Focused
+                    Industry Skills
 
                 </h3>
 
                 <p>
 
-                    Build skills demanded by companies and freelance clients.
+                    Learn the skills companies and freelance
+                    clients actually demand.
 
                 </p>
 
             </div>
 
+
             <div class="about-box">
 
                 <h3>
 
-                    Professional Certificates
+                    Verifiable Certificates
 
                 </h3>
 
                 <p>
 
-                    Every completed course includes a verifiable certificate.
+                    Every certificate can be verified online
+                    through our website.
+
+                </p>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <h3>
+
+                    Expert Guidance
+
+                </h3>
+
+                <p>
+
+                    Learn directly from instructors with
+                    practical experience.
+
+                </p>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <h3>
+
+                    Career Support
+
+                </h3>
+
+                <p>
+
+                    Build confidence for freelancing,
+                    higher education and professional careers.
+
+                </p>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <h3>
+
+                    Learn From Anywhere
+
+                </h3>
+
+                <p>
+
+                    Experience a real classroom without
+                    leaving your home.
 
                 </p>
 
@@ -190,9 +281,8 @@
 
 </section>
 
-
 <!-- =========================
-        COURSES
+      FEATURED COURSES
 ========================= -->
 
 <section class="courses-home">
@@ -203,71 +293,156 @@
 
             <h2>
 
-                Popular Courses
+                Featured Professional Courses
 
             </h2>
+
+            <p>
+
+                Industry-focused courses designed to build practical skills,
+                real-world experience and professional confidence.
+
+            </p>
 
         </div>
 
         <div class="course-grid">
 
+            <!-- Python -->
+
             <div class="course-card">
 
-                <h3>
+                <img src="{{ url_for('static', filename='images/python.jpg') }}" alt="Python Programming">
 
-                    Python Programming
+                <h3>Python Programming</h3>
 
-                </h3>
+                <p>
+
+                    Learn Python from beginner to advanced through practical
+                    coding and projects.
+
+                </p>
+
+                <a href="/course/python-programming" class="btn-course">
+
+                    Explore Course
+
+                </a>
 
             </div>
 
+            <!-- Data Science -->
+
             <div class="course-card">
 
-                <h3>
+                <img src="{{ url_for('static', filename='images/data-science.jpg') }}" alt="Data Science">
 
-                    Data Science
+                <h3>Data Science</h3>
 
-                </h3>
+                <p>
+
+                    Data Analysis, Visualization and Machine Learning using
+                    real datasets.
+
+                </p>
+
+                <a href="/course/data-science" class="btn-course">
+
+                    Explore Course
+
+                </a>
 
             </div>
 
+            <!-- Web -->
+
             <div class="course-card">
 
-                <h3>
+                <img src="{{ url_for('static', filename='images/web.jpg') }}" alt="Web Development">
 
-                    Web Development
+                <h3>Web Development</h3>
 
-                </h3>
+                <p>
+
+                    Build professional websites using HTML, CSS,
+                    JavaScript and Flask.
+
+                </p>
+
+                <a href="/course/web-development" class="btn-course">
+
+                    Explore Course
+
+                </a>
 
             </div>
 
+            <!-- AI -->
+
             <div class="course-card">
 
-                <h3>
+                <img src="{{ url_for('static', filename='images/ai-tools.jpg') }}" alt="AI Tools">
 
-                    Canva Design
+                <h3>AI Tools</h3>
 
-                </h3>
+                <p>
+
+                    Learn ChatGPT, Gemini, Copilot and modern AI tools for
+                    productivity.
+
+                </p>
+
+                <a href="/course/ai-tools" class="btn-course">
+
+                    Explore Course
+
+                </a>
 
             </div>
 
+            <!-- IELTS -->
+
             <div class="course-card">
 
-                <h3>
+                <img src="{{ url_for('static', filename='images/ielts.jpg') }}" alt="IELTS">
 
-                    MS Office
+                <h3>IELTS Preparation</h3>
 
-                </h3>
+                <p>
+
+                    Academic & General IELTS with Speaking, Writing,
+                    Reading and Listening.
+
+                </p>
+
+                <a href="/course/ielts" class="btn-course">
+
+                    Explore Course
+
+                </a>
 
             </div>
 
+            <!-- Spoken -->
+
             <div class="course-card">
 
-                <h3>
+                <img src="{{ url_for('static', filename='images/spoken-english.jpg') }}" alt="Spoken English">
 
-                    AI Tools
+                <h3>Spoken English</h3>
 
-                </h3>
+                <p>
+
+                    Speak English confidently through practical daily
+                    communication.
+
+                </p>
+
+                <a href="/course/spoken-english" class="btn-course">
+
+                    Explore Course
+
+                </a>
 
             </div>
 
@@ -277,6 +452,110 @@
 
 </section>
 
+
+
+<!-- =========================
+      LEARNING JOURNEY
+========================= -->
+
+<section class="learning-path">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+
+                Your Learning Journey
+
+            </h2>
+
+            <p>
+
+                Every student follows a structured learning path at
+                AIZAL STUDIO.
+
+            </p>
+
+        </div>
+
+        <div class="journey-grid">
+
+            <div class="journey-card">
+
+                <h3>1</h3>
+
+                <h4>Explore</h4>
+
+                <p>
+
+                    Choose the course that matches your career goals.
+
+                </p>
+
+            </div>
+
+            <div class="journey-card">
+
+                <h3>2</h3>
+
+                <h4>Learn</h4>
+
+                <p>
+
+                    Attend practical classes and complete assignments.
+
+                </p>
+
+            </div>
+
+            <div class="journey-card">
+
+                <h3>3</h3>
+
+                <h4>Build</h4>
+
+                <p>
+
+                    Create real projects to strengthen your portfolio.
+
+                </p>
+
+            </div>
+
+            <div class="journey-card">
+
+                <h3>4</h3>
+
+                <h4>Certificate</h4>
+
+                <p>
+
+                    Receive an online verifiable professional certificate.
+
+                </p>
+
+            </div>
+
+            <div class="journey-card">
+
+                <h3>5</h3>
+
+                <h4>Career</h4>
+
+                <p>
+
+                    Prepare for freelancing, jobs and higher education.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- =========================
       FEATURED PROJECT
@@ -290,9 +569,16 @@
 
             <h2>
 
-                Featured Project
+                Student Innovation
 
             </h2>
+
+            <p>
+
+                Learning at AIZAL STUDIO goes beyond theory. Every student
+                is encouraged to build real-world projects.
+
+            </p>
 
         </div>
 
@@ -306,14 +592,17 @@
 
             <p>
 
-                Interactive Streamlit dashboard with maps,
-                charts, district analytics, PDF export and CSV export.
+                A professional data analytics platform developed using
+                Python, Streamlit and interactive visualizations for
+                district-level development insights.
 
             </p>
 
-            <a href="https://punjab-district-development-dashboard.streamlit.app/" target="_blank" class="btn">
+            <a href="https://punjab-district-development-dashboard.streamlit.app/"
+               target="_blank"
+               class="btn">
 
-                Live Demo
+                View Live Project
 
             </a>
 
@@ -336,13 +625,14 @@
 
             <h2>
 
-                Certificate Verification
+                Online Certificate Verification
 
             </h2>
 
             <p>
 
-                Verify every certificate issued by AIZAL STUDIO.
+                Every certificate issued by AIZAL STUDIO can be verified
+                instantly through our secure verification system.
 
             </p>
 
@@ -360,7 +650,7 @@
 
 
 <!-- =========================
-        CONTACT
+      FINAL CTA
 ========================= -->
 
 <section class="contact-home">
@@ -369,21 +659,32 @@
 
         <h2>
 
-            Ready To Start Your Journey?
+            Ready to Build Your Future?
 
         </h2>
 
         <p>
 
-            Join AIZAL STUDIO today and build your future with practical skills.
+            Join students from across Pakistan and start learning
+            professional digital skills today.
 
         </p>
 
-        <a href="/contact" class="btn">
+        <div class="hero-buttons">
 
-            Contact Us
+            <a href="/courses" class="btn">
 
-        </a>
+                Explore Courses
+
+            </a>
+
+            <a href="/contact" class="btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
 
     </div>
 
