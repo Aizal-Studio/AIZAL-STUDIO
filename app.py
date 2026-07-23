@@ -31,6 +31,169 @@ def about():
 def courses():
     return render_template("courses.html")
 
+@app.route("/course/<course_name>")
+def course_detail(course_name):
+
+    courses = {
+
+        "python": {
+            "icon": "🐍",
+            "title": "Python Programming",
+            "description": "Learn Python from beginner to advanced with practical projects.",
+            "instructor": "Beenish",
+            "duration": "2 Months",
+            "timing": "Mon - Fri | 7:00 PM - 8:30 PM",
+            "mode": "Online & Physical",
+            "level": "Beginner",
+            "outline": [
+                "Python Basics",
+                "Variables & Data Types",
+                "Loops & Functions",
+                "File Handling",
+                "OOP",
+                "Projects"
+            ]
+        },
+
+        "data-science": {
+            "icon": "📊",
+            "title": "Data Science",
+            "description": "Learn Data Analysis, Visualization and Machine Learning.",
+            "instructor": "Beenish",
+            "duration": "3 Months",
+            "timing": "Mon - Fri | 6:00 PM - 7:30 PM",
+            "mode": "Online & Physical",
+            "level": "Intermediate",
+            "outline": [
+                "Excel",
+                "Python",
+                "Pandas",
+                "NumPy",
+                "Visualization",
+                "Machine Learning"
+            ]
+        },
+
+        "web-development": {
+            "icon": "🌐",
+            "title": "Web Development",
+            "description": "Build modern responsive websites using HTML, CSS, JavaScript & Flask.",
+            "instructor": "Beenish",
+            "duration": "3 Months",
+            "timing": "Weekend",
+            "mode": "Online & Physical",
+            "level": "Beginner",
+            "outline": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Flask",
+                "SQLite",
+                "Deployment"
+            ]
+        },
+
+        "canva": {
+            "icon": "🎨",
+            "title": "Canva & Graphic Design",
+            "description": "Create professional social media designs.",
+            "instructor": "Beenish",
+            "duration": "1 Month",
+            "timing": "Weekend",
+            "mode": "Online",
+            "level": "Beginner",
+            "outline": [
+                "Canva Basics",
+                "Branding",
+                "Social Media",
+                "Posters",
+                "Presentations"
+            ]
+        },
+
+        "ms-office": {
+            "icon": "💼",
+            "title": "MS Office",
+            "description": "Professional Microsoft Office training.",
+            "instructor": "Beenish",
+            "duration": "1 Month",
+            "timing": "Weekend",
+            "mode": "Online & Physical",
+            "level": "Beginner",
+            "outline": [
+                "Word",
+                "Excel",
+                "PowerPoint",
+                "Projects"
+            ]
+        },
+
+        "ai-tools": {
+            "icon": "🤖",
+            "title": "AI Tools",
+            "description": "Master modern AI productivity tools.",
+            "instructor": "Mam Amna",
+            "duration": "1 Month",
+            "timing": "Weekend",
+            "mode": "Online",
+            "level": "Beginner",
+            "outline": [
+                "ChatGPT",
+                "Gemini",
+                "Copilot",
+                "AI Automation",
+                "Prompt Engineering"
+            ]
+        },
+
+        "ielts": {
+            "icon": "🇬🇧",
+            "title": "IELTS Preparation",
+            "description": "Prepare for Academic & General IELTS.",
+            "instructor": "Mam Fatima",
+            "duration": "2 Months",
+            "timing": "Mon - Fri",
+            "mode": "Online & Physical",
+            "level": "All Levels",
+            "outline": [
+                "Listening",
+                "Reading",
+                "Writing",
+                "Speaking",
+                "Mock Tests"
+            ]
+        },
+
+        "spoken-english": {
+            "icon": "🗣",
+            "title": "Spoken English",
+            "description": "Improve confidence in spoken English.",
+            "instructor": "Mam Fatima",
+            "duration": "2 Months",
+            "timing": "Mon - Fri",
+            "mode": "Online & Physical",
+            "level": "Beginner",
+            "outline": [
+                "Daily Conversation",
+                "Grammar",
+                "Vocabulary",
+                "Pronunciation",
+                "Interview Skills"
+            ]
+        }
+
+    }
+
+    course = courses.get(course_name)
+
+    if not course:
+        return "Course Not Found", 404
+
+    return render_template(
+        "course_details.html",
+        course=course
+    )
+
 # ==========================
 # Course Details
 # ==========================
