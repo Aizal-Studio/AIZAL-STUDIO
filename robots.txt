@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://aizastudio.pythonanywhere.com/sitemap.xml
